@@ -1,0 +1,9 @@
+{
+  "server": {
+    "src": [
+      "server/**/*.ts",
+      "!server/test/**/*.ts"
+    ],
+    "dest": "dist"
+  }
+}

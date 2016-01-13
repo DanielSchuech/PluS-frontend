@@ -1,0 +1,26 @@
+{
+  "name": "PluS_wrapper",
+  "version": "0.0.1",
+  "description": "wrapper for Angular, Angular 2",
+  "keywords": [
+    "wrapper",
+    "Angular",
+    "Angular2",
+    "PluS"
+  ],
+  "author": {
+    "name": "Daniel Schuech",
+    "email": "dschuech@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/DanielSchuech",
+  "main": "dist/server.js",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp-typescript": "^2.10.0",
+    "run-sequence": "^1.1.5"
+  },
+  "dependencies": {
+    "tiny-di": "^0.3.1"
+  }
+}
