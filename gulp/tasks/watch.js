@@ -3,6 +3,9 @@ var gulp = require('gulp');
 
 gulp.task('watch', function () {
 
-  gulp.watch([config.server.src], ['transpile']);
+  gulp.watch([config.server.src], ['transpileServer']);
+  gulp.watch([config.scripts.src], ['transpileClient']);
+  gulp.watch([config.json.src], ['cpjson']);
+  gulp.watch([config.views.src], ['views']);
   
 });

@@ -5,5 +5,22 @@
       "!server/test/**/*.ts"
     ],
     "dest": "dist"
+  },
+  
+  "scripts": {
+    "src": [
+      "app/scripts/**/*.ts"
+    ],
+    "dest": "dist/app"
+  },
+  
+  "json": {
+    "src": "server/**/*.json",
+    "dest": "dist"
+  },
+  
+  "views": {
+    "src": "app/index.html",
+    "dest": "dist/app"
   }
 }
