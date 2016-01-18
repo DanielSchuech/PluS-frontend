@@ -14,3 +14,7 @@ var Server = (function () {
 })();
 exports.__esModule = true;
 exports["default"] = Server;
+Server.$inject = {
+    deps: [],
+    callAs: 'class'
+};

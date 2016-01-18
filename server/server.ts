@@ -21,3 +21,8 @@ export default class Server {
     console.log('Wrapper started on '+config.port);
   }
 }
+
+Server.$inject = {
+  deps: [],
+  callAs: 'class'
+}

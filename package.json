@@ -21,6 +21,7 @@
     "run-sequence": "^1.1.5"
   },
   "dependencies": {
+    "express": "^4.13.3",
     "tiny-di": "^0.3.1"
   }
 }
