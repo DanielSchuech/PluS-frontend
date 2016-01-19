@@ -9,7 +9,7 @@ export default class Static {
   
   constructor(server: any) {
     
-    server.get('/', function (req: any, res: any) {
+    server.get('*', function (req: any, res: any) {
       let filedir: string = path.dirname(__filename);
       let file: string = path.resolve(filedir + '/../' + '/app/index.html');
       
