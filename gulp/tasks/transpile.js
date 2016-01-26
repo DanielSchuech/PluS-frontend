@@ -8,6 +8,7 @@ gulp.task('transpileServer', function () {
 		  target: 'es5',
 		  module: 'commonjs',
 			noImplicitAny: true,
+      sourceMap: true,
 			experimentalDecorators: true,
 			emitDecoratorMetadata: true
 		}))

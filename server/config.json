@@ -1,6 +1,8 @@
 {
   "server": {
-    "extensions": [],
+    "extensions": [
+      {"extension": "PluginHandler", "file": "extensions/pluginhandler"}
+    ],
     "modules": [
       {"module": "modules/angular2"},
       {"module": "modules/scripts"},

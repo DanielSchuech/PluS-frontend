@@ -12,9 +12,12 @@ export default class Server {
   private server: any;
   
   private $injector: any;
+  private pluginInfo:any;
+  private pluginStatus: any;
   
-  constructor() {
-    
+  constructor(_pluginInfo: any, _pluginStatus: any) {
+    this.pluginStatus = _pluginStatus;
+    this.pluginInfo = _pluginInfo;
   }
   
   start(config: any) {
@@ -22,6 +25,8 @@ export default class Server {
     this.$injector.setResolver(dependencyResolver);
     this.$injector.bind('serverConfig').to(serverConfig);
     this.$injector.bind('config').to(config);
+    this.$injector.bind('PluginInfo').to(this.pluginInfo);
+    this.$injector.bind('pluginStatus').to(this.pluginStatus);
     
     this.app = express();
     
@@ -36,7 +41,7 @@ export default class Server {
 }
 
 (<any>Server).$inject = {
-  deps: [],
+  deps: ['PluginInfo', 'pluginStatus'],
   callAs: 'class'
 }
 

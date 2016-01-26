@@ -3,13 +3,17 @@ var express = require('express');
 var tinydi = require('tiny-di');
 var serverConfig = require('./config');
 var Server = (function () {
-    function Server() {
+    function Server(_pluginInfo, _pluginStatus) {
+        this.pluginStatus = _pluginStatus;
+        this.pluginInfo = _pluginInfo;
     }
     Server.prototype.start = function (config) {
         this.$injector = new tinydi();
         this.$injector.setResolver(dependencyResolver);
         this.$injector.bind('serverConfig').to(serverConfig);
         this.$injector.bind('config').to(config);
+        this.$injector.bind('PluginInfo').to(this.pluginInfo);
+        this.$injector.bind('pluginStatus').to(this.pluginStatus);
         this.app = express();
         this.$injector.bind('server').to(this.app);
         this.server = this.app.listen(config.port);
@@ -22,7 +26,7 @@ var Server = (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = Server;
 Server.$inject = {
-    deps: [],
+    deps: ['PluginInfo', 'pluginStatus'],
     callAs: 'class'
 };
 function loadModules($injector) {

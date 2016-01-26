@@ -2,12 +2,13 @@
 
 declare var require: any;
 declare var __filename: string;
+import PluginHandler from '../extensions/pluginhandler';
 
 let path = require('path');
 
 export default class Static {
   
-  constructor(server: any) {
+  constructor(server: any, pluginHandler: PluginHandler) {
     
     server.get('*', function (req: any, res: any) {
       let filedir: string = path.dirname(__filename);
@@ -26,6 +27,6 @@ export default class Static {
 }
 
 (<any>Static).$inject = {
-  deps: ['server'],
+  deps: ['server', 'PluginHandler'],
   callAs: 'class'
 };
