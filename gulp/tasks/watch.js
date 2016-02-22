@@ -7,5 +7,6 @@ gulp.task('watch', function () {
   gulp.watch([config.scripts.src], ['transpileClient']);
   gulp.watch([config.json.src], ['cpjson']);
   gulp.watch([config.views.src], ['views']);
+  gulp.watch([config.ng1.src], ['ng1bundle']);
   
 });

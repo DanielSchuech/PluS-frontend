@@ -3,15 +3,18 @@
     <base href="/">
   
     <title>Angular 2 QuickStart</title>
-    <!-- 1. Load libraries -->
+    <!-- 1. Load ng2 libraries -->
     <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/router.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.0/http.js"></script>
     
-    <!-- 2. Configure SystemJS -->
+    <!-- 2. Load ng1 libraries -->
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="app/ng1bundle.js"></script>
+    
+    <!-- 3. Configure SystemJS for ng2-->
     <script>
       System.config({
         packages: {        

@@ -22,5 +22,10 @@
   "views": {
     "src": "app/index.html",
     "dest": "dist/app"
+  },
+  
+  "ng1": {
+    "src": "app/ng1/**/*.js",
+    "dest": "dist/app"
   }
 }

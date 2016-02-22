@@ -5,6 +5,7 @@
     ],
     "modules": [
       {"module": "modules/angular2"},
+      {"module": "modules/angular"},
       {"module": "modules/scripts"},
       {"module": "modules/static"}
     ]
@@ -17,6 +18,12 @@
       "node_modules/rxjs/bundles/Rx.js",
       "node_modules/angular2/bundles/angular2.dev.js",
       "node_modules/angular2/bundles/router.js"
+    ]
+  },
+  
+  "angular": {
+    "bundles": [
+     "node_modules/angular/angular.js" 
     ]
   }
 }

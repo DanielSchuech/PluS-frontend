@@ -9,6 +9,6 @@ gulp.task('dev', ['clean'], function(cb) {
 
   global.isProd = false;
 
-  runSequence('views', 'cpjson', 'transpileClient', 'transpileServer', 'watch', cb);
+  runSequence('views', 'cpjson', 'transpileClient', 'transpileServer', 'ng1bundle', 'watch', cb);
 
 });
