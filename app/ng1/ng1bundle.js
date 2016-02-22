@@ -5,7 +5,7 @@
 var phonecatApp = angular.module('phonecatApp', []);
 
 phonecatApp.controller('PhoneListCtrl', function($scope) {
-  $scope.phones = [
+  this.phones = [
     {'name': 'Nexus S',
      'snippet': 'Fast just got faster with Nexus S.'},
     {'name': 'Motorola XOOM™ with Wi-Fi',
@@ -13,4 +13,9 @@ phonecatApp.controller('PhoneListCtrl', function($scope) {
     {'name': 'MOTOROLA XOOM™',
      'snippet': 'The Next, Next Generation tablet.'}
   ];
+});
+
+angular.element(document).ready(function() {
+  var elem = document.querySelector('[plus]');
+  angular.bootstrap(elem, ['phonecatApp']);
 });

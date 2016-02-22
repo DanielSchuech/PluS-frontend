@@ -24,6 +24,6 @@ export class B {}
   {path:'/two', name: 'PageTwo', component: PageTwo}
 ])
 
-export class AppComponent { }
+export class AppComponent {}
 
 
